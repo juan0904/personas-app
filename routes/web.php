@@ -1,11 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ComunaController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/comuna', function () {
-    return view('comuna/index');
-});
+Route::get('/comunas', [ComunaController:: class, 'index']);
