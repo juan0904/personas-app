@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComunaController;
 use App\Http\Controllers\DepartamentoController;
 use App\Http\Controllers\MunicipioController;
+use App\Models\Departamento;
 
 Route::get('/', function () {
     return view('welcome');
@@ -29,4 +30,9 @@ Route::get('/municipios/{municipio}/edit', [MunicipioController::class , 'edit']
 //rutas de departamentos
 
 Route::get('/departamentos', [DepartamentoController:: class, 'index'])->name('departamento.index');
+Route::post('/departamentos', [DepartamentoController::class, 'store'])->name('departamento.store');
+Route::get('/departamentos/create', [DepartamentoController::class , 'create'])->name('departamento.create');
+
+
+
 
