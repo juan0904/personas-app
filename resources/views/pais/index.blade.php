@@ -12,6 +12,7 @@
   <body>
     <div class="container">
       <h1>Listado de Paises</h1>
+      <a href="{{route('pais.create')}}" class="btn btn-success">Add</a>
         <table class="table">
             <thead>
                 <tr>
@@ -26,7 +27,7 @@
                 <tr>
                 <th scope="row">{{$pais->pais_codi}}</th>
                 <td>{{$pais->pais_nomb}}</td>
-                <td>{{$pais->pais_capi}}</td>
+                <td>{{$pais->muni_nomb}}</td>
                 <td>Actions</td>
                 </tr>
             @endforeach
